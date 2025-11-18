@@ -4,7 +4,7 @@ name: Build and Deploy Python App to Azure Web App
 on:
   push:
     branches:
-      - main
+      - none
   workflow_dispatch:
 
 env:
