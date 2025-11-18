@@ -33,8 +33,15 @@ jobs:
 
       - name: (Optional) Run tests
         run: |
-          # e.g. pytest
-          pytest
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+         pip install pytest
+         pytest
+
+ 
+
+          
+      
 
       - name: Archive the app for deployment
         run: |
