@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_WEBAPP_NAME: saksham     # Change to your Web App name in Azure
+  AZURE_WEBAPP_NAME: sakshamgarcha     # Change to your Web App name in Azure
   PYTHON_VERSION: '3.11'                     # Change to the Python version you use
   AZURE_WEBAPP_PACKAGE_PATH: '.'            # Path to the folder you want to deploy (relative to repo root)
   STARTUP_COMMAND: 'startup.txt'                        # Optional: e.g. "gunicorn app:app" or "python manage.py runserver"
@@ -58,6 +58,7 @@ jobs:
     needs: build
     permissions:
       contents: read
+      id-token: write
     
       
     environment:
